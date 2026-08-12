@@ -40,8 +40,6 @@ entry_point_address=$(readelf -h "$file_name" | awk -F: '/Entry point address:/ 
 
 source ./messages.sh
 
-# Capture output from messages.sh
 output=$(display_elf_header_info)
 
-# Print without adding another newline
 printf '%s' "$output"
